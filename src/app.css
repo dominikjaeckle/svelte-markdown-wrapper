@@ -1,0 +1,37 @@
+/* @import url(./katex.min.css); */
+@import "assets/github-markdown.css";
+@import "assets/highlightjs.css";
+
+:root {
+  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.7em !important;
+}
+
+h1, h2, h3 {
+  border-bottom: none !important;
+  font-weight: lighter !important;
+  /* margin: 30px 0 !important; */
+}
