@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { Configuration } from "./_util/config";
-import { selectedFile } from "./_util/stores";
+    import { selectedFile } from "./_util/stores";
     
     /**
      * Asynchronous read of the config yaml file
@@ -10,9 +10,12 @@ import { selectedFile } from "./_util/stores";
     let filelist = [];
     onMount(async () => {
         filelist = await Configuration.getInstance().getConfig();
-        console.log(filelist);
     });
 
+    /**
+     * Sets the file via the storage, enabling other components to be aware via the observer pattern
+     * @param file
+     */
     function loadFile(file) {
         selectedFile.set(file);
     }
@@ -32,20 +35,16 @@ import { selectedFile } from "./_util/stores";
         font-size: 1.7em;
         font-weight: lighter;
     }
-
     ul {
         padding: 0;
     }
-
     li {
         cursor: pointer;
         list-style-type: none;
     }
-
     li:hover {
         font-weight: bold;
     }
-
     .file {
         font-family: 'Courier New', Courier, monospace;
         font-size: 0.7em;

@@ -1,3 +1,5 @@
 filelist:
   - file: test.md
     identifier: Testfile
+
+  # add new .md files here
